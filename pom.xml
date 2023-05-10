@@ -155,7 +155,6 @@
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
 			<build>
-				
 				<plugins>
 					<plugin>
 						<groupId>org.jfrog.buildinfo</groupId>
@@ -237,18 +236,7 @@
 				<maven.deploy.skip>true</maven.deploy.skip>
 			</properties>
 
-			<<build>
-				  <plugins>
-				    <plugin>
-				      <groupId>org.apache.maven.plugins</groupId>
-				      <artifactId>maven-compiler-plugin</artifactId>
-				      <version>3.8.1</version>
-				      <configuration>
-					<release>11</release>
-				      </configuration>
-				    </plugin>
-				  </plugins>
-				</build>
+			<build>
 
 				<plugins>
 
@@ -877,13 +865,24 @@
 
 		</plugins>
 	</build>
-
+	
 	<scm>
 		<url>https://github.com/spring-projects/spring-hateoas</url>
 		<connection>scm:git:git://github.com/spring-projects/spring-hateoas.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:spring-projects/spring-hateoas.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.1</version>
+      <configuration>
+        <release>11</release>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 
 </project>
-
